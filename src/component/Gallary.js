@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "../styles/Gallary.css"
 import {FaArrowAltCircleLeft, FaArrowAltCircleRight} from 'react-icons/fa'
 import pdffile from "./unit1.pdf"
+import pdffile1 from "./unit2.pdf"
+import pdffile2 from "./unit5.pdf"
+
 const images = [
     {
         image: "https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=1600"
@@ -10,7 +13,15 @@ const images = [
         image: "https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     {
+        image: "http://store-images.s-microsoft.com/image/apps.34807.13737222747171486.b5d22c01-23d2-4c58-8ec5-615ceed070c8.535b2b2a-25be-40d3-afa7-2341fde67a8b",
+        pdf: pdffile2
+    },
+    {
         image: "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
+    {
+        image: "http://store-images.s-microsoft.com/image/apps.34807.13737222747171486.b5d22c01-23d2-4c58-8ec5-615ceed070c8.535b2b2a-25be-40d3-afa7-2341fde67a8b",
+        pdf: pdffile1
     },
     {
         image: "https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?auto=compress&cs=tinysrgb&w=1600"
@@ -43,7 +54,7 @@ const length = images.length;
     return(
         <div className="container">
             <div className="heading">
-                Image Slider
+                Slides of Images and Pdfs
             </div>
             <div className="slider">
                 <FaArrowAltCircleLeft className="leftArrow" onClick={prevSlide}></FaArrowAltCircleLeft>
@@ -57,7 +68,7 @@ const length = images.length;
                                         
                                         {
                                             pic.pdf ? (
-                                                <a href={pic.pdf}>{pic.image}</a>
+                                                <a href={pic.pdf}><img src={pic.image}></img></a>
                                             ):
                                             (
                                                 <img key={index} src={pic.image} alt="beautiful pic" className="image"></img>
