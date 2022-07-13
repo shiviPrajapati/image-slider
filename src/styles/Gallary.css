@@ -1,0 +1,64 @@
+.container{
+    background-color: rgb(238, 237, 237);
+    background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v960-ning-30.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=63dd5f402645ef52fb7dfb592aec765a");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 50px;
+    margin-bottom: -80px;
+}
+
+.image{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.leftArrow{
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    font-size: 150%;
+    left: 27%
+}
+
+.rightArrow{
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    font-size: 150%;
+    right: 27%;
+}
+
+
+
+.slide {
+    opacity: 0;
+    transition-duration: 2s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transition-duration: 2s;
+    transform: scale(1.08);
+  }
+
+@media only screen and (max-width: 600px) {
+    .image{
+        height: 400px;
+        width: 60%;
+    }
+}
